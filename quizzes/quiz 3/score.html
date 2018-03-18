@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>The Nuke Quiz #3</title>
+		<script src="myquiz.js"></script>
+
+<style>
+div {
+	background-color: light grey;
+	width: 1000;
+	border: 25px white;
+	padding: 25px;
+	margin: 25px;
+}
+</style>
+
+</head>	
+
+	<body>
+		<center>
+
+		<h1><b>The Nuke Quiz #3</b></h1>
+		<img src = "../../img/images.jpeg" alt = "Third image" />
+	<h1></h1>
+	<h1></h1>
+
+	<form>
+	<center>
+	<input class="MyButton" type="button" id="mybutton" value="Check Score" onclick=quiztotal() />
+	<input class="MyButton" type="button" value="Close Window" onclick="window.open('', '_self', ''); window.close();"/>
+	</center>
+	</form>
+
+
+		<center>
+
+		<div id="display"></div>
+		<script>
+		    function quiztotal() {
+			    var wrong_count=0
+                var loc = window.location.href
+                var patt = loc.indexOf('?')
+                if (patt > 0)
+                {
+                     var right_count = window.location.href.split('?')[1].split('&')[0].split('=')[1]
+	                 var wrong_count = window.location.href.split('?')[1].split('&')[1].split('=')[1]
+                }
+				var data1 = "<h2>Number of correct answers : "+right_count+"<br>"
+				var data1 = data1.fontcolor("green")
+				var data2 = "Number of wrong answers : "+wrong_count+"</br></h2>"
+				var data2 = data2.fontcolor("red")
+				var data = data1.concat(data2)
+				var data = data.fontcolor("green")
+                document.getElementById("display").innerHTML = data
+           }
+       </script>
+	   </center>
+
+	</body>
+
+</html>

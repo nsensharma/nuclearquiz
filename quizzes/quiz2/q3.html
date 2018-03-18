@@ -3,6 +3,9 @@
 	
 	<head>
 		<title>The Nuke Quiz #2</title>
+		<script src="myquiz.js"></script>
+
+
 	</head>
 	
 	<body>
@@ -23,11 +26,11 @@
 
 	<form>
 	<center>
-	<input class="MyButton" type="button" value="Coal Power plant" onclick="window.location.href = 'q3_wrong.html'" style="font-size:25px"/>
+	<input class="MyButton" type="button" value="Coal Power plant" onclick=createURl('q3_wrong.html') style="font-size:25px"/>
 	
-	<input class="MyButton" type="button" align="right" value="Hydroelectric Power plant" onclick="window.location.href = 'q3_wrong.html'" style="font-size:25px"/>
+	<input class="MyButton" type="button" align="right" value="Hydroelectric Power plant" onclick=createURl('q3_wrong.html') style="font-size:25px"/>
 
-	<input class="MyButton" type="button" align="right" value="Nuclear Power plant" onclick="window.location.href = 'q3_right.html'" style="font-size:25px"/>
+	<input class="MyButton" type="button" align="right" value="Nuclear Power plant" onclick=createURl('q3_right.html') style="font-size:25px"/>
 	</center>
 </form> 
 		
